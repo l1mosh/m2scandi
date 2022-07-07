@@ -1,0 +1,15 @@
+version: "3.5"
+services:
+  db:
+    hostname: "${WARDEN_ENV_NAME}-mysql"
+    image: ${WARDEN_IMAGE_REPOSITORY}/mysql:8.0
+  php-fpm:
+    volumes:
+      - ./.warden/php/zz-config.ini:/etc/php.d/zz-config.ini
+    env_file:
+      - ./.warden/env.dev
+  php-debug:
+    volumes:
+      - ./.warden/php/zz-config.ini:/etc/php.d/zz-config.ini
+    env_file:
+      - ./.warden/env.dev

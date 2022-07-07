@@ -1,0 +1,20 @@
+{
+    "name": "limosh/module-base",
+    "description": "Limosh base module",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": "proprietary",
+    "require": {
+        "php": "~7.4.0",
+        "magento/framework": "*",
+        "magento/module-backend": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Limosh\\Base\\": ""
+        }
+    }
+}
